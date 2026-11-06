@@ -79,7 +79,7 @@ The public Rabdi node has sharp edges. The client deals with them.
 
 | Feature | Status |
 |---|---|
-| Create entities, writable or readonly | Yes, tested on chain |
+| Create entities, writable or readonly | Yes, the same bytes Strike writes to Arkiv in production |
 | Patch, extend, transfer and delete ops, byte for byte with the official SDK | Yes |
 | Expiry by blocks, seconds or `Duration` | Yes |
 | Typed attributes: `bool`, `i32`, `u64`, `u256`, `dec`, `bytes`, `str`, `addr`, `key` | Yes |
