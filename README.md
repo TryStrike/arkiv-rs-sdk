@@ -1,5 +1,7 @@
 # arkiv-rs-sdk
 
+[![crates.io](https://img.shields.io/crates/v/arkiv-rs-sdk.svg)](https://crates.io/crates/arkiv-rs-sdk) [![docs.rs](https://docs.rs/arkiv-rs-sdk/badge.svg)](https://docs.rs/arkiv-rs-sdk)
+
 A Rust SDK for [Arkiv](https://docs.arkiv.network), the Web3 database. MIT licensed.
 
 Arkiv is an Ethereum-aligned database chain. You write entities with typed attributes, and you read them back with a query language.
@@ -12,13 +14,18 @@ Package `arkiv-rs-sdk`, library `arkiv`. The wire format is in [SPEC.md](SPEC.md
 
 ## Install
 
-```toml
-[dependencies]
-arkiv-rs-sdk = { git = "https://github.com/TryStrike/arkiv-rs-sdk" }
-tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+```bash
+cargo add arkiv-rs-sdk
+cargo add tokio --features macros,rt-multi-thread
 ```
 
-Adjust the source to wherever you got the crate. It is not published to crates.io yet.
+or in `Cargo.toml`:
+
+```toml
+[dependencies]
+arkiv-rs-sdk = "0.1"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+```
 
 ## Quickstart
 
