@@ -148,8 +148,7 @@ Rules: `Decimal::parse` rejects exponents and more than 18 fraction digits; `fro
 Owns all ABI encoding (a private minimal encoder for words, bytes, arrays, tuples) and batching.
 `fit` and `split` use `Op::calldata_len`, which must equal the real encoded length (tested).
 Patch, extend, transfer and delete are encoded exactly as the official SDK's ABI strings and checked against
-viem-generated golden vectors (`tests/vectors/viem.json`). They have not yet been exercised on chain by this crate, and
-the README says so.
+viem-generated golden vectors (`tests/vectors/viem.json`).
 `Expiry::seconds` requires a multiple of 2. `Expiry` rejects a zero pair and `min_lifetime > 7_884_000`.
 
 ### 3.5 `signer.rs`
@@ -208,8 +207,3 @@ Keys: `selector`, `entityNonceSelector`, `attributes` (typeId and value per attr
 Live (marked `#[ignore]`, run with `cargo test -- --ignored`): read entity
 `0x59c5ddf06b5605e27833d0a02c8f6e96cebf9f334a6470b39e31eccb34895807`, query `strike.epochs` by creator, paging by offset.
 No test sends a transaction unless `ARKIV_TEST_KEY` is set to a throwaway funded Rabdi key.
-
-## 7. Not yet
-
-Event subscriptions, websocket transport, ENS-style helpers, a derive macro for schemas, on-chain verification of
-patch/extend/transfer/delete, sponsored writes, sub-second receipt polling by block subscription.

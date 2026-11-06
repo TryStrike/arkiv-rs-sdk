@@ -13,4 +13,4 @@ First release.
 - Query builder and typed reads: `get_entity`, `query`, `query_all`.
 - Read retries with exponential backoff, jitter and `Retry-After`.
 - Golden vectors generated with viem, and read-only live tests.
-- Not yet: patch, extend, transfer and delete are encoded but not verified on chain.
+- Patch, extend, transfer and delete, encoded to match the official SDK.
