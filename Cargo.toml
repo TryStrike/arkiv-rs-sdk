@@ -1,0 +1,28 @@
+[package]
+name = "arkiv-rs-sdk"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Rust SDK for Arkiv, the Web3 database: typed attributes, batched creates, signing, queries."
+repository = "https://github.com/TryStrike/arkiv-rs-sdk"
+readme = "README.md"
+keywords = ["arkiv", "ethereum", "web3", "database", "sdk"]
+categories = ["api-bindings", "database"]
+
+[lib]
+name = "arkiv"
+path = "src/lib.rs"
+
+[dependencies]
+k256 = { version = "0.13", features = ["ecdsa"] }
+sha3 = "0.10"
+hex = "0.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+tokio = { version = "1", features = ["time"] }
+getrandom = "0.2"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "time"] }
